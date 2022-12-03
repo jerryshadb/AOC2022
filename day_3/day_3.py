@@ -5,7 +5,7 @@ def divide_items(item: str)-> tuple:
     return item[:len(item) // 2], item[len(item) // 2:]
 
 # find mutual items in compartment
-def get_same_items(item: str) -> str:
+def get_same_item(item: str) -> str:
     first_half, second_half = divide_items(item)
 
     return ''.join(set(first_half).intersection(second_half))
@@ -33,7 +33,7 @@ def solution():
 
     priority_sum_part_1 = 0
     for item in input:
-        mutual_item = get_same_items(item)
+        mutual_item = get_same_item(item)
         if mutual_item.islower():
             priority_sum_part_1 += priorities_lower[mutual_item]
         else:
