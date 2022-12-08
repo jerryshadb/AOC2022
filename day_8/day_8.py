@@ -1,4 +1,4 @@
-def is_visible(trees, row, col):
+def is_visible(trees: list, row: int, col: int) -> bool:
 	tree = trees[row][col]
 	# Check all trees above current tree.
 	for i in range(row - 1, -1, -1):
@@ -31,8 +31,7 @@ def is_visible(trees, row, col):
 	return False
 
 
-def scenic_score(trees, row, col):
-	"""Returns scenic score of Tree."""
+def scenic_score(trees: list, row: int, col: int) -> int:
 	tree = trees[row][col]
 	up, down, left, right = 0, 0, 0, 0
 	
